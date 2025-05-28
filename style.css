@@ -1,0 +1,247 @@
+/* Definições @font-face para carregar suas fontes locais */
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --font-family-serif: "Young Serif", serif;
+  --font-family-sans-serif: "Outfit", sans-serif;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Cores do stemplate */
+  --color-bg-body: #f3e5d8;
+  --color-bg-main: white;
+  --color-text-preparation-h3: hsl(332, 51%, 32%);
+  --color-bg-preparation: hsl(330, 100%, 98%);
+  --color-text-section-h2: hsl(14, 45%, 36%);
+  --color-border-table: #e0e0e0;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px;
+  background-color: var(--color-bg-body);
+  font-family: var(--font-family-sans-serif);
+  font-weight: var(--fw-regular);
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Layout Principal */
+.flex-container-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main-content {
+  max-width: 736px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-bg-main);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* Tipografia Geral */
+h1,
+h2 {
+  font-family: var(--font-family-serif);
+  font-weight: var(--fw-regular);
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  padding: 0;
+}
+
+h2 {
+  margin: 1.5em 0 1em 0;
+  color: var(--color-text-section-h2);
+}
+
+strong {
+  font-weight: var(--fw-semibold);
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+  margin-bottom: 1.5em;
+}
+
+li {
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Estilos de Componentes/Seções */
+
+.simple-omelette-recipe {
+  font-family: var(--font-family-serif);
+  font-weight: var(--fw-regular);
+}
+
+.paragraph-resume {
+  margin-left: 0.5em;
+}
+
+/* Seção: Preparation Time */
+.preparation-time {
+  background-color: var(--color-bg-preparation);
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+}
+
+.preparation-time > h3 {
+  font-family: var(--font-family-sans-serif);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-preparation-h3);
+  margin-bottom: 1em;
+}
+
+.preparation-time ul li::marker {
+  color: var(--color-text-preparation-h3);
+  font-weight: var(--fw-bold);
+}
+
+.preparation-time > ul li {
+  margin-left: 1.5em;
+}
+
+/* Seção: Ingredients */
+.ingredients > h2 {
+  font-weight: var(--fw-regular);
+}
+
+.ingredients ul li::marker {
+  color: var(--color-text-section-h2);
+  font-weight: var(--fw-bold);
+}
+
+.ingredients > ul li {
+  margin-left: 1.5em;
+}
+
+/* Seção: Instructions */
+.instructions > h2 {
+  font-weight: var(--fw-regular);
+}
+
+.instructions ol li {
+  font-family: var(--font-family-sans-serif);
+}
+
+.instructions ol li::marker {
+  color: var(--color-text-section-h2);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-family-sans-serif);
+}
+
+.instructions > ol li {
+  margin-left: 1.5em;
+}
+
+.nutrition-table > h2 {
+  font-weight: var(--fw-regular);
+}
+
+.nutrition-table table {
+  width: 100%;
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+}
+
+.nutrition-table td {
+  padding: 0.75em 0.5em;
+  font-family: var(--font-family-sans-serif);
+}
+
+.nutrition-table td:last-child {
+  font-weight: var(--fw-bold);
+  color: var(--color-text-section-h2);
+}
+
+.nutrition-table tr:not(:first-child) td {
+  border-top: 1px solid var(--color-border-table);
+}
+
+/* Classes Utilitárias */
+.bold-words {
+  font-weight: var(--fw-bold);
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+
+  .main-content {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .main-content img {
+    border-radius: 0px;
+  }
+
+  .main-content > * {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-content > img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .preparation-time > h3 {
+    font-size: 1.125em;
+  }
+}
