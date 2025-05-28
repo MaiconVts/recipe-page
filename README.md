@@ -28,8 +28,8 @@ The challenge was to build a responsive recipe page that closely matches the pro
 
 ### Links
 
-- Solution URL: [Add your solution URL here](https://www.frontendmentor.io/solutions/your-solution-url-here)
-- Live Site URL: [Add your live site URL here](https://your-live-site-url.com) (e.g., GitHub Pages)
+- Solution URL: [Add your solution URL here](https://www.frontendmentor.io/solutions/your-solution-url-here) its gonna updated the most soon possible.
+- Live Site URL: [(https://maiconvts.github.io/recipe-page/)
 
 ## My Process
 
